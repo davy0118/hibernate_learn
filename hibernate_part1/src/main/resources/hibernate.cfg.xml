@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- hibernate根据映射关系自动建表
+            默认: 不会创建表
+            create: 没有表就创建，有表就删除重建。
+            create-drop: 没有表就创建，有表就删除重建，使用完自动删表。
+            update: 没有表就创建表，否则使用现有的表。
+            validate: 不会创建表
+         -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <mapping resource="User.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
