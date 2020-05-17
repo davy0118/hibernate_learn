@@ -1,4 +1,4 @@
-#配置文件方式运行Hibernate
+# 配置文件方式运行Hibernate
 
 
 ## 如何启动

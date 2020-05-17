@@ -1,4 +1,4 @@
-#Annotation方式运行Hibernate
+# Annotation方式运行Hibernate
 
 
 ## 如何启动
