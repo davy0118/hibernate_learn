@@ -18,7 +18,7 @@ public class Application {
             Session session = sessionFactory.openSession();
             session.beginTransaction();
 
-            insert(session);
+            // insert(session);
             select(session);
 
             session.getTransaction().commit();
